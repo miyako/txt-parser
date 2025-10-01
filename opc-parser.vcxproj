@@ -185,10 +185,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="opc-parser\main.cpp" />
+    <ClCompile Include="txt-parser\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="opc-parser\opc-parser.h" />
+    <ClInclude Include="txt-parser\txt-parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
