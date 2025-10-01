@@ -1,2 +1,7 @@
 XCBuildData/*
 .build/*
+.vs/*
+txt-parser/x64/Release/txt-parser.tlog/CL.command.1.tlog
+txt-parser/x64/Release/txt-parser.tlog/unsuccessfulbuild
+txt-parser/x64/Release/txt-parser.tlog/txt-parser.lastbuildstate
+txt-parser/x64/Release/opc-parser.log
