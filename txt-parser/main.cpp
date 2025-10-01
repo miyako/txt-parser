@@ -98,7 +98,7 @@ int main(int argc, OPTARG_T argv[]) {
     const OPTARG_T input_path  = NULL;
     const OPTARG_T output_path = NULL;
     
-    std::vector<opc_uint8_t>txt_data(0);
+    std::vector<uint8_t>txt_data(0);
 
     int ch;
     std::string text;
@@ -136,7 +136,7 @@ int main(int argc, OPTARG_T argv[]) {
         FILE *f = _fopen(input_path, _rb);
         if(f) {
             _fseek(f, 0, SEEK_END);
-            opc_uint32_t len = (opc_uint32_t)_ftell(f);
+            size_t len = (size_t)_ftell(f);
             _fseek(f, 0, SEEK_SET);
             txt_data.resize(len);
             fread(txt_data.data(), 1, txt_data.size(), f);

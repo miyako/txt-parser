@@ -13,19 +13,6 @@
 #include <Windows.h>
 #endif
 
-#include <cybozu/mmap.hpp>
-#include <cybozu/file.hpp>
-#include <cybozu/atoi.hpp>
-#include <cybozu/option.hpp>
-#include "cfb.hpp"
-#include "decode.hpp"
-#include "encode.hpp"
-#include "make_dataspace.hpp"
-#ifdef _MSC_VER
-#include <cybozu/string.hpp>
-#endif
-
-#include <opc/opc.h>
 #include <json/json.h>
 #include <sstream>
 #include <iostream>
