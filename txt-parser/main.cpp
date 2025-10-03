@@ -10,7 +10,7 @@
 static void usage(void)
 {
     fprintf(stderr, "Usage:  txt-parser -r -i in -o out -\n\n");
-    fprintf(stderr, "text extractor for ooxml documents\n\n");
+    fprintf(stderr, "text extractor for txt documents\n\n");
     fprintf(stderr, " -%c path  : %s\n", 'i' , "document to parse");
     fprintf(stderr, " -%c path  : %s\n", 'o' , "text output (default=stdout)");
     fprintf(stderr, " %c        : %s\n", '-' , "use stdin for input");
