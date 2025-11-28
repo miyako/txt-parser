@@ -5,41 +5,25 @@
 ### Dependencies and Licensing
 
 * the source code of this CLI tool is licensed under the MIT license.
-* see [libopc](https://github.com/freuter/libopc/blob/master/LICENSE) for the licensing of **libopc** (BSD).
  
-# opc-parser
-CLI tool to extract text from OOXML
-
-## usage
+# txt-parser
+CLI tool to extract text from TXT
 
 ```
-opc-parser -i example.docx -o example.json
+text extractor for txt documents
 
--i path  : document to parse
--o path  : text output (default=stdout)
--        : use stdin for input
--r       : raw text output (default=json)
--p pass  : password
+ -i path  : document to parse
+ -o path  : text output (default=stdout)
+ -        : use stdin for input
+ -r       : raw text output (default=json)
 ```
 
-## specification
+## JSON
 
-|type|page|paragraph|run|
-|-|-|:-:|-|
-|docx|`br` where `type=page` or `sectPr/type` where `val=nextPage`|`p`|`t` or `a:t`
-|xlsx|`sheet%d.xml`|`row`|`c/v` where `@t=s\|str\|b\|e\|n` or `c/is/t` where `@t=inlineStr`|
-|pptx|`slide%d.xml`|`p`|`t` or `a:t` cells are joined by `\t`|
-
-
-## output (JSON)
-
-```
-{
-    "type: "docx" | "xlsx" | "pptx",
-    "pages": [
-        {
-            "paragraphs": [{array of string}]
-        }
-    ]
-}
-```
+|Property|Level|Type|Description|
+|-|-|-|-|
+|document|0|||
+|document.type|0|Text||
+|document.pages|0|Array||
+|document.pages[].paragraphs|1|Array||
+|document.pages[].paragraphs[].text|2|Text||
